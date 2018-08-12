@@ -6,6 +6,9 @@
     <div class="flex p-4">
       <div class="flex flex-col w-1/4">
         <button-menu :walletAddress="walletAddress"></button-menu>
+        <div class="mt-2 text-center text-xs align-text-bottom">
+          App Version: 1.0.0
+        </div>
       </div>
       <div class="w-3/4 flex-no-grow pl-4">
         <div class="bg-white rounded border border-grey-light px-4 pt-2 pb-6 mb-4">

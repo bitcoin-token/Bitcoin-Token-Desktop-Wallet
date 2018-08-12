@@ -5,9 +5,9 @@ const contractAddress 	= 'Your token contract address';
 const abi               = JSON.parse('[{Your token ABI}]');
 
 // API Key Information
-const infuraApiKey			= '';
-const ethplorerApiKey		= '';
-const coinlibApiKey			= '';
+const infuraApiKey			= '1';
+const ethplorerApiKey		= '1';
+const coinlibApiKey			= '1';
 
 module.exports = {
 	tokenName,

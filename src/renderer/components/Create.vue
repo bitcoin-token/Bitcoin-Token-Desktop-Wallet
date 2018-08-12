@@ -142,10 +142,22 @@
         this.copied = true;
       },
 
+      clearStorage: function () {
+        localStorage.removeItem('seedEncrypted');
+        localStorage.removeItem('passwordEncrypted');
+        localStorage.removeItem('ethPendingTxs');
+        localStorage.removeItem('tokenPendingTxs');
+        localStorage.removeItem('ethCompletedTxs');
+        localStorage.removeItem('tokenCompletedTxs');
+      },
+
       generateWallet: function () {
         if(this.seedPhrase != '' && this.password != '' && this.confirmPassword != '') {
           if(this.password == this.confirmPassword) {
             if(keystore.isSeedValid(this.seedPhrase)) {
+              
+              this.clearStorage();
+
               keystore.createVault({
                 password: this.password,
                 seedPhrase: this.seedPhrase,

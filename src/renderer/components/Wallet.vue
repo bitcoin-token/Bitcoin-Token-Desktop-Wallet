@@ -232,6 +232,8 @@
                       this.completedTxs = [completedTx].concat(this.completedTxs);
 
                       localStorage.setItem('tokenCompletedTxs', JSON.stringify(this.completedTxs));
+
+                      this.refreshing = false;
                     } else {
                       this.refreshing = false;
                     }

@@ -15,8 +15,13 @@ This wallet is exclusive to BTK tokens, you can't load other ERC-20 tokens into 
 
 ## Screenshots
 
-Wallet
 ![BTK Wallet](https://btk.community/assets/apps/wallet.png)
+
+![BTK Receive](https://btk.community/assets/apps/receive.png)
+
+![BTK Send](https://btk.community/assets/apps/send.png)
+
+![BTK Settings](https://btk.community/assets/apps/settings.png)
 
 ## Security Vulnerabilities
 

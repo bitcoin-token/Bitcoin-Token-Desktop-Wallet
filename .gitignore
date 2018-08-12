@@ -4,6 +4,7 @@ dist/web/*
 build/*
 !build/icons
 node_modules/
+src/renderer/common/Environment.js
 npm-debug.log
 npm-debug.log.*
 thumbs.db

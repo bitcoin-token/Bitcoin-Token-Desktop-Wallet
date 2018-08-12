@@ -132,11 +132,20 @@
       },
 
       getTokenPrice: function () {
+        /*
         axios.get('https://coinlib.io/api/v1/coin?key=' + env.coinlibApiKey + '&pref=USD&symbol=' + env.tokenTicker)
           .then(response => {
             if(response.data.price != undefined) {
               localStorage.setItem('tokenPrice', JSON.parse(response.data.price).toString());
               this.tokenPrice = response.data.price;
+            }
+          }).catch(error => {console.log(error)});
+          */
+        axios.get('https://btk.community/api/cmc.php')
+          .then(response => {
+            if(response.data.USD != undefined) {
+              localStorage.setItem('tokenPrice', JSON.parse(response.data.USD).toString());
+              this.tokenPrice = response.data.USD
             }
           }).catch(error => {console.log(error)});
       },

@@ -21,7 +21,7 @@
       <div class="rounded-lg bg-white shadow">
         <div class="flex justify-between py-3 border-b border-grey-light">
           <h3 class="pl-3 mt-1">ETH Transactions</h3>
-          <button type="button" class="focus:outline-none bg-grey-lighter hover:bg-grey-light text-grey-darker py-2 px-4 rounded mr-3" @click="getCompletedTxs()">
+          <button type="button" class="focus:outline-none bg-grey-lighter hover:bg-grey-light text-grey-darker py-2 px-4 rounded mr-3" @click="updateWallet()">
             <i class="fa fa-sync-alt text-md" :class="refreshing ? 'fa-spin' : ''"></i>
           </button>
         </div>
@@ -125,6 +125,10 @@
         this.pendingTxs   = pendingTxs != null ? JSON.parse(pendingTxs) : [];
         this.completedTxs = completedTxs != null ? JSON.parse(completedTxs) : [];
 
+        this.updateWallet();
+      },
+
+      updateWallet: function () {
         this.getEthPrice();
         this.getEthBalance();
         this.getCompletedTxs();
